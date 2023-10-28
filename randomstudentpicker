@@ -1,0 +1,18 @@
+import random
+
+students = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28"]
+
+while students:
+    i = random.randint(0, len(students) - 1)
+
+    chosen_student = students.pop(i)
+
+    print("Избран номер за изпит: ", chosen_student)    
+
+    next_student = input("Ако искате да спрете, напишете 'STOP',а ако искате да продължите натиснете Enter. : ")
+
+    if next_student.lower() == 'stop':
+        break
+
+if not students:
+    print("Всички ученици са изпитани.")
